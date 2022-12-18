@@ -12,6 +12,8 @@ struct CityView: View {
     
     var city: City
     
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         VStack {
             ZStack {
@@ -33,6 +35,10 @@ struct CityView: View {
             .chartLegend(.hidden)
             .padding()
             
+            Button("Back to Countries List") {
+                router.reset()
+            }
+            .buttonStyle(.bordered)
         }
         .navigationTitle("City")
         .navigationBarTitleDisplayMode(.inline)
@@ -44,6 +50,7 @@ struct CityView_Previews: PreviewProvider {
         NavigationStack {
             CityView(city: City.all[3])
                 .navigationTitle("City")
+                .environmentObject(Router())
         }
     }
 }

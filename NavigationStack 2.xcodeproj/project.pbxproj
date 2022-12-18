@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D1EC95F294EE7B600B4F0E2 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1EC95E294EE7B600B4F0E2 /* CountryView.swift */; };
 		3D1EC961294EE8BC00B4F0E2 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1EC960294EE8BC00B4F0E2 /* CityView.swift */; };
+		3D1EC963294F597500B4F0E2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1EC962294F597500B4F0E2 /* Router.swift */; };
 		BB65807A28BE891A00488FBA /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65807928BE891A00488FBA /* AppEntry.swift */; };
 		BB65807C28BE891A00488FBA /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65807B28BE891A00488FBA /* CountryListView.swift */; };
 		BB65807E28BE891B00488FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB65807D28BE891B00488FBA /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		3D1EC95E294EE7B600B4F0E2 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		3D1EC960294EE8BC00B4F0E2 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
+		3D1EC962294F597500B4F0E2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BB65807628BE891A00488FBA /* NavigationStack 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NavigationStack 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB65807928BE891A00488FBA /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		BB65807B28BE891A00488FBA /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				BB65807F28BE891B00488FBA /* Preview Content */,
 				3D1EC95E294EE7B600B4F0E2 /* CountryView.swift */,
 				3D1EC960294EE8BC00B4F0E2 /* CityView.swift */,
+				3D1EC962294F597500B4F0E2 /* Router.swift */,
 			);
 			path = "NavigationStack 2";
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				3D1EC961294EE8BC00B4F0E2 /* CityView.swift in Sources */,
 				BB65808828BE893200488FBA /* Models.swift in Sources */,
 				BB65807A28BE891A00488FBA /* AppEntry.swift in Sources */,
+				3D1EC963294F597500B4F0E2 /* Router.swift in Sources */,
 				3D1EC95F294EE7B600B4F0E2 /* CountryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

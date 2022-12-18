@@ -10,8 +10,11 @@
 import SwiftUI
 
 struct CountryListView: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $router.path) {
             List(Country.sample) { country in
                 NavigationLink(value: country) {
                     HStack {
@@ -31,5 +34,6 @@ struct CountryListView: View {
 struct CountryListView_Previews: PreviewProvider {
     static var previews: some View {
         CountryListView()
+            .environmentObject(Router())
     }
 }

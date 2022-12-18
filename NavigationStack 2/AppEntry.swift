@@ -11,9 +11,13 @@ import SwiftUI
 
 @main
 struct AppEntry: App {
+    
+    @StateObject var router = Router()
+    
     var body: some Scene {
         WindowGroup {
             CountryListView()
+                .environmentObject(router)
         }
     }
 }
