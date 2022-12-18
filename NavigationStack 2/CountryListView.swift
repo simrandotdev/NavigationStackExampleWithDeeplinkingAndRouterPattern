@@ -11,13 +11,20 @@ import SwiftUI
 
 struct CountryListView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List(Country.sample) { country in
+                NavigationLink(value: country) {
+                    HStack {
+                        Text(country.flag)
+                        Text(country.name)
+                    }
+                }
+            }
+            .navigationTitle("Countries")
+            .navigationDestination(for: Country.self) { country in
+                CountryView(country: country)
+            }
         }
-        .padding()
     }
 }
 
