@@ -18,6 +18,27 @@ struct AppEntry: App {
         WindowGroup {
             CountryListView()
                 .environmentObject(router)
+                .onOpenURL { url in
+                    print("✅ URL Scheme: ", url.scheme)
+                    print("✅ URL Host: ", url.host)
+                    print("✅ URL lastPathComponent: ", url.lastPathComponent)
+                    
+                    guard let scheme = url.scheme,
+                          scheme == "navStack" else { return }
+                    guard let country = url.host else { return }
+                    
+                    if let foundContry = Country.sample.first(where: { $0.name == country }) {
+                        router.reset()
+                        router.path.append(foundContry)
+                        
+                        if url.pathComponents.count == 2 {
+                            let city = url.lastPathComponent
+                            if let foundCity = foundContry.cities.first(where: { $0.name == city } ) {
+                                router.path.append(foundCity)
+                            }
+                        }
+                    }
+                }
         }
     }
 }
